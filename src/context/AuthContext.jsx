@@ -16,7 +16,7 @@ export function AuthProvider({ children }) {
       if (stored) {
         setUser(JSON.parse(stored));
       } else {
-        const res = await fetch('/api/auth/me', { credentials: 'include' });
+        const res = await fetch('https://vybe-backend1-6smu.onrender.com/api/auth/me', { credentials: 'include' });
         if (res.ok) {
           const data = await res.json();
           setUser(data.user);

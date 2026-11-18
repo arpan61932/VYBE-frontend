@@ -6,7 +6,7 @@ export default function Navbar() {
   const navigate = useNavigate();
 
   const logout = async () => {
-    await fetch('/api/auth/logout', { method: 'POST', credentials: 'include' });
+    await fetch('https://vybe-backend1-6smu.onrender.com/api/auth/logout', { method: 'POST', credentials: 'include' });
     localStorage.removeItem('mm_user');
     navigate('/login');
   };
